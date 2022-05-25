@@ -10,7 +10,6 @@ const Experience = () => {
 
   return (
     <footer>
-      {" "}
       <div className={`e ${darkMode ? "e-dark-mode" : "e-light-mode"}`}>
         <div className="e-wraper">
           <div className="e-title">
