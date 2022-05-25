@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Experience from "./components/experience/experience";
+import Intro from "./components/intro/intro";
+import Projects from "./components/projects/projects";
+import DarkModeContext from "./components/DarkModeContext";
+import { useState } from "react";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <DarkModeContext.Provider value={{ darkMode, setDarkMode }}>
+        <div>
+          <Intro />
+          <Projects />
+          <Experience />
+        </div>
+      </DarkModeContext.Provider>
+    </body>
   );
 }
 
